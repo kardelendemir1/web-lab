@@ -5,6 +5,7 @@ function App() {
       <h2>LAB-1</h2>
       <p>Ad Soyad: [Student Name]</p>
       <p>Ogrenci No: [Student Number]</p>
+      <p>Hobiler: Kod yazmak, teknoloji haberleri okumak</p>
     </div>
   )
 }

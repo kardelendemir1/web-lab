@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "title": "E-Ticaret Sitesi",
+    "description": "React, Redux ve Tailwind CSS kullanılarak geliştirilmiş, tamamen responsive ve erişilebilir bir e-ticaret platformu.",
+    "category": "frontend",
+    "technologies": ["React", "Redux", "Tailwind CSS", "Vite"],
+    "year": 2023,
+    "imageUrl": "https://via.placeholder.com/400x200"
+  },
+  {
+    "id": "2",
+    "title": "Kişisel Blog",
+    "description": "Gelişmiş içerik yönetimi ve karanlık mod desteğine sahip SEO uyumlu bir blog sistemi.",
+    "category": "fullstack",
+    "technologies": ["Node.js", "Express", "React", "PostgreSQL"],
+    "year": 2022,
+    "imageUrl": "https://via.placeholder.com/400x200"
+  },
+  {
+    "id": "3",
+    "title": "Hava Durumu Radarı",
+    "description": "Açık hava durumu API'si üzerinden veri çekip anlık radarı veren bir mobil-first web uygulaması.",
+    "category": "frontend",
+    "technologies": ["React", "Fetch API", "Tailwind CSS"],
+    "year": 2024,
+    "imageUrl": "https://via.placeholder.com/400x200"
+  },
+  {
+    "id": "4",
+    "title": "Hastane Randevu Sistemi",
+    "description": "Kurumsal mimaride yazılmış, ölçeklenebilir ve güvenli hasta kayıt ve randevu yönetim sistemi API'si.",
+    "category": "backend",
+    "technologies": ["C#", ".NET Core", "SQL Server", "Docker"],
+    "year": 2021,
+    "imageUrl": "https://via.placeholder.com/400x200"
+  },
+  {
+    "id": "5",
+    "title": "Gerçek Zamanlı Sohbet App",
+    "description": "WebSocket entegrasyonu kullanılarak uçtan uca hızlı mesajlaşma sağlayan anlık iletişim uygulaması.",
+    "category": "fullstack",
+    "technologies": ["React", "Socket.io", "Node.js", "MongoDB"],
+    "year": 2024,
+    "imageUrl": "https://via.placeholder.com/400x200"
+  }
+]

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Category, SortOption } from '../types';
+import type { Category, SortOption } from '../types';
 import { Input } from './Input';
 
 interface FilterBarProps {
@@ -46,8 +46,8 @@ export const FilterBar: React.FC<FilterBarProps> = ({
                             key={cat.value}
                             onClick={() => setCategoryFilter(cat.value)}
                             className={`px-3 py-1.5 text-sm rounded-md transition-colors ${categoryFilter === cat.value
-                                    ? 'bg-blue-600 text-white'
-                                    : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'
+                                ? 'bg-blue-600 text-white'
+                                : 'bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'
                                 }`}
                         >
                             {cat.label}

@@ -5,7 +5,7 @@ import { FilterBar } from './components/FilterBar';
 import { ProjectList } from './components/ProjectList';
 import { ContactForm } from './components/ContactForm';
 import { UIKit } from './UIKit';
-import { Project, Category, SortOption } from './types';
+import type { Project, Category, SortOption } from './types';
 import { fetchProjects } from './services/api';
 
 function App() {

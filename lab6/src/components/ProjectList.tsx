@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Project, Category, SortOption } from '../types';
+import type { Project, Category, SortOption } from '../types';
 import { ProjectCard } from './ProjectCard';
 import { Alert } from './Alert';
 

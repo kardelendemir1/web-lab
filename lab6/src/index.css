@@ -24,5 +24,5 @@
 
 /* Skip Link */
 .skip-link {
-  @apply absolute -top-10 left-0 bg-primary text-white p-2 z-50 transition-all focus:top-0 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-opacity-50;
+  @apply absolute -top-10 left-0 bg-primary text-white p-2 z-50 transition-all focus:top-0 focus:outline-none focus:ring-4 focus:ring-primary/50;
 }

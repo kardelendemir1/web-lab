@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #005fcc;
+  --color-primary-hover: #004494;
+  --color-surface: #f9f9f9;
+  --color-surface-hover: #f1f1f1;
+  --color-error: #bd0000;
+  --color-border: #dddddd;
+  --color-header: #282c34;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-white transition-colors duration-200;
+  }
+}
+
+/* Enable Dark Mode manually via "class" logic */
+/* In Tailwind v4, dark mode using a class is inherently supported if you use `dark:` prefix, but we need the class on html */
+:global(.dark) body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Skip Link */
+.skip-link {
+  @apply absolute -top-10 left-0 bg-primary text-white p-2 z-50 transition-all focus:top-0 focus:outline-none focus:ring-4 focus:ring-primary focus:ring-opacity-50;
+}

@@ -1,0 +1,70 @@
+@import './styles/tokens.css';
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Applying Fluid Typography dynamically mapping to clamp values */
+  font-size: var(--text-base);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-md);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary);
+}
+
+h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-md);
+}
+
+small {
+  font-size: var(--text-sm);
+}
+
+/* Accessible focus ring for all focusable elements */
+*:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

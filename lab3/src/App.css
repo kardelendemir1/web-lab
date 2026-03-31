@@ -1,0 +1,260 @@
+/* App.css: Modern LAB-3 CSS (Mobile-first, Grid, Flex, Design Tokens) */
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-sm) var(--space-md);
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* === HEADER & NAV (Flexbox) === */
+header {
+  background-color: var(--color-header);
+  color: var(--color-text-inverse);
+  padding: var(--space-md) var(--space-sm);
+}
+
+/* Flexbox Container */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  /* Mobile first: Logo and nav stack vertically */
+  align-items: center;
+  gap: var(--space-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin: 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows wrapping on very tiny screens */
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+/* === MAIN CONTENT === */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md);
+}
+
+section {
+  margin-bottom: var(--space-3xl);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* === ABOUT ME === */
+#hakkimda figure {
+  margin: 0 0 var(--space-lg) 0;
+  text-align: center;
+}
+
+#hakkimda img {
+  border-radius: var(--radius-full);
+  border: 4px solid var(--color-surface);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+#hakkimda figcaption {
+  font-weight: bold;
+  margin-top: var(--space-sm);
+}
+
+#hakkimda ul {
+  padding-left: var(--space-xl);
+}
+
+/* === PROJECTS (CSS Grid) === */
+.project-grid {
+  display: grid;
+  /* Auto-fit and minmax provide a highly responsive grid out of the box */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-lg);
+}
+
+.project-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  /* Flex inside Grid cell to push footer down */
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card img {
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-md);
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.project-card p:last-child {
+  margin-top: auto;
+  /* Pushes the 'Technologies' text to the bottom */
+  font-weight: 500;
+}
+
+/* === CONTACT FORM === */
+form {
+  background-color: var(--color-surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.form-group label {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: var(--text-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-primary);
+  outline: 3px solid rgba(0, 95, 204, 0.3);
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: var(--space-md);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-lg);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background-color: var(--color-primary-hover);
+}
+
+.error-message {
+  min-height: var(--space-lg);
+}
+
+.error-message small {
+  color: var(--color-error);
+  font-weight: 700;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: var(--space-2xl) var(--space-md);
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.social-links {
+  margin-top: var(--space-md);
+  display: flex;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+.social-links a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* =========================================
+   MEDIA QUERIES (BREAKPOINTS)
+   1. Mobile: 0 - 639px (Default definitions above)
+   2. Tablet: 640px and up
+   3. Desktop: 1024px and up
+========================================= */
+
+/* TABLET (640px+) */
+@media (min-width: 640px) {
+  .header-container {
+    flex-direction: row;
+    /* Switch header logo and nav side-by-side */
+    justify-content: space-between;
+    padding: 0 var(--space-xl);
+  }
+
+  header h1 {
+    text-align: left;
+  }
+}
+
+/* DESKTOP (1024px+) */
+@media (min-width: 1024px) {
+  main {
+    padding: var(--space-3xl) var(--space-xl);
+  }
+
+  /* Adjust section structures to side-by-side for larger screens where appropriate */
+  #hakkimda {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  #hakkimda figure {
+    margin: 0;
+    /* Remove bottom margin to align correctly */
+    grid-row: 1 / 3;
+    /* Span image across rows */
+  }
+
+  #hakkimda h2 {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  #hakkimda p,
+  #hakkimda ul {
+    grid-column: 2;
+  }
+}
